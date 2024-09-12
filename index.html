@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple XOR Cipher Example</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1> Cipher </h1>
+
+    <button id="switch-to-text-btn">Switch to Text Encryption/Decryption</button>
+    <button id="switch-to-file-btn">Switch to File Encryption/Decryption</button>
+
+    <div id="text-encryption-section" class="section active">
+        <h2>Text Input Encryption/Decryption</h2>
+        <input type="text" id="message" placeholder="Enter message to encrypt" required>
+        <input type="number" id="key" placeholder="Enter encryption range" required>
+        <br>
+        <button id="encrypt-btn">Encrypt</button>
+        <button id="decrypt-btn">Decrypt</button>
+        <button id="clear-btn">Clear</button>
+        <button id="download-btn" style="display:none;">Download</button>
+        <div id="result"></div>
+        <div id="error" class="error"></div>
+        <iframe id="encrypted-message-frame" srcdoc=""></iframe>
+        <div id="qr-code-container"></div>
+        <center><button id="download-qr-btn" style="display:none;">Download QR Code</button></center>
+        <center><footer>Developed by Bug Hunters</footer></center>
+    </div>
+
+    <div id="file-encryption-section" class="section">
+        <h2>File Input Encryption/Decryption</h2>
+        <input type="file" id="file-input" accept=".txt">
+        <input type="number" id="file-key" placeholder="Enter encryption range" required>
+        <br>
+        <button id="file-encrypt-btn">Encrypt File</button>
+        <button id="file-decrypt-btn">Decrypt File</button>
+        <button id="file-clear-btn">Clear</button>
+        <button id="file-download-btn" style="display:none;">Download File</button>
+        <div id="file-result"></div>
+        <div id="file-error" class="error"></div>
+        <iframe id="file-encrypted-message-frame" srcdoc=""></iframe>
+        <center><footer>Developed by Bug Hunters</footer></center>
+    </div>
+
+    <script src="./main.js">
+       
+    </script>
+</body>
+</html>
